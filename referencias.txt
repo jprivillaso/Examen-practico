@@ -20,7 +20,7 @@ http://www.freesoftwaremagazine.com/articles/drivers_linux - como hacer drivers 
 
 http://www.xml.com/ldd/chapter/book/ch13.html - mmap y DMA
 
-
+http://lwn.net/Kernel/LDD3/ - Kernel de linux, explicaciones
 ====================================================================================
 -----PARA SACAR COMANDOS
 http://ss64.com/nt/wmic.html - windows
