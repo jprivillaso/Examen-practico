@@ -1,0 +1,154 @@
+<!DOCTYPE RefEntry PUBLIC "-//OASIS//DTD DocBook V4.1//EN">
+<refentry id="lshw">
+
+<refmeta>
+<refentrytitle>lshw</refentrytitle>
+<manvolnum>1</manvolnum>
+<refmiscinfo>$Name:  $</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>lshw</refname>
+<refpurpose>
+list hardware
+</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+ <cmdsynopsis>
+   <command>lshw</command> 
+        <arg choice="opt">-version</arg>
+        <arg choice="opt">-help</arg>
+	<arg choice="opt">-html</arg>
+   </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1><title>DESCRIPTION</title>
+<para>
+<indexterm><primary>lshw</primary></indexterm>
+<application>lshw</application>
+is a small tool to extract detailed information on the hardware
+configuration of the machine. It can report exact memory
+configuration, firmware version, mainboard configuration, 
+<hardware>CPU</hardware> version
+and speed, cache configuration, bus speed, etc. on 
+<acronym>DMI</acronym>-capable x86
+systems and on some <productname>PowerPC</productname>
+machines (<productname>PowerMac G4</productname> is known to work).
+</para>
+<para>
+It currently supports <hardware>DMI</hardware> (x86 only), <productname>OpenFirmware</productname> device tree (<productname>PowerPC</productname> only),
+<hardware>PCI/AGP</hardware>, <hardware>CPUID</hardware> (x86), <hardware>IDE/ATA/ATAPI</hardware>, <hardware>PCMCIA</hardware> (only tested on x86) and <hardware>SCSI</hardware>.
+</para>
+
+<para>
+<variablelist>
+<varlistentry><term>-version</term>
+<listitem><para>
+Displays the version of <application>lshw</application> and exits.
+</para></listitem></varlistentry>
+<varlistentry><term>-help</term>
+<listitem><para>
+Displays the available command line options and quits.
+</para></listitem></varlistentry>
+<varlistentry><term>-html</term>
+<listitem><para>
+Output the device tree as an HTML page.
+</para></listitem></varlistentry>
+</variablelist>
+</para>
+
+</refsect1>
+
+<refsect1><title>BUGS</title>
+<para>
+<application>lshw</application> currently does not detect 
+<hardware>USB</hardware> or <hardware>Firewire</hardware>(<hardware>IEEE1394</hardware>) devices.
+</para>
+
+<para>
+Not all architectures supported by GNU/Linux are fully supported (e.g.
+<hardware>CPU</hardware> detection).
+</para>
+
+<para>
+"Virtual" <hardware>SCSI</hardware> interfaces used for <hardware>USB</hardware> mass storage and <hardware>SCSI</hardware> emulation over <hardware>IDE</hardware> are not reported correctly yet.
+</para>
+
+</refsect1>
+
+<refsect1><title>NOTES</title>
+<para>
+<application>lshw</application> must be run as super user or it will only report
+partial information.
+</para>
+
+</refsect1>
+
+<refsect1><title>FILES</title>
+<para>
+<variablelist>
+
+<varlistentry><term>/usr/local/share/pci.ids</term>
+<term>/usr/share/pci.ids</term>
+<term>/etc/pci.ids</term>
+<term>/usr/share/hwdata/pci.ids</term>
+<listitem><para>
+A list of all known PCI ID's (vendors,  devices, classes and subclasses).
+</para></listitem></varlistentry>
+
+<varlistentry><term>/proc/bus/pci/*</term>
+<listitem><para>
+Used to access the configuration of installed PCI busses and devices.
+</para></listitem></varlistentry>
+
+<varlistentry><term>/proc/ide/*</term>
+<listitem><para>
+Used to access the configuration of installed IDE busses and devices.
+</para></listitem></varlistentry>
+
+<varlistentry><term>/proc/scsi/*, /dev/sg*</term>
+<listitem><para>
+Used to access the configuration of installed SCSI devices.
+</para></listitem></varlistentry>
+
+<varlistentry><term>/dev/cpu/*/cpuid</term>
+<listitem><para>
+Used on x86 platforms to access CPU-specific configuration.
+</para></listitem></varlistentry>
+
+<varlistentry><term>/proc/device-tree/*</term>
+<listitem><para>
+Used on PowerPC platforms to access OpenFirmware configuration.
+</para></listitem></varlistentry>
+
+</variablelist>
+</para>
+</refsect1>
+
+<refsect1><title>SEE ALSO</title>
+<para><filename>/proc/*</filename>, <application>linuxinfo</application>(1), <application>lspci</application>(8), <application>lsusb</application>(8)
+</para>
+</refsect1>
+
+<refsect1><title>COPYING</title>
+<para>
+<application>lshw</application> is distributed under the GNU GENERAL PUBLIC LICENSE (GPL) version 2.
+</para>
+</refsect1>
+
+<refsect1><title>AUTHOR</title>
+<para>
+<application>lshw</application> is maintained by Lyonel Vincent
+<email>vincentl@ec-lyon.fr</email>.
+</para>
+</refsect1>
+
+<refsect1><title>OTHER INFO</title>
+<para>
+The webpage for <application>lshw</application> is at 
+<ulink url="http://ezix.org/software/lshw.html"></ulink></para>
+</refsect1>
+
+</refentry>
+
