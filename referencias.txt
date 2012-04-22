@@ -44,3 +44,7 @@ http://www.gnu.org/software/libc/manual/html_node/System-Configuration.html#Syst
 http://www.gnu.org/software/libc/manual/html_node/Examples-of-Sysconf.html#Examples-of-Sysconf
 
 http://www.gnu.org/software/libc/manual/html_node/Constants-for-Sysconf.html#Constants-for-Sysconf
+
+
+Source de lshw
+http://ezix.org/source/packages/lshw/releases/
