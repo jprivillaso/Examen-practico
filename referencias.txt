@@ -37,3 +37,10 @@ Comandos
 
 
 http://www.networkcomputing.com/unixworld/tutorial/010/010.txt.html
+
+Sysconf - GNU
+http://www.gnu.org/software/libc/manual/html_node/System-Configuration.html#System-Configuration
+
+http://www.gnu.org/software/libc/manual/html_node/Examples-of-Sysconf.html#Examples-of-Sysconf
+
+http://www.gnu.org/software/libc/manual/html_node/Constants-for-Sysconf.html#Constants-for-Sysconf
